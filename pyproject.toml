@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coaforge"
+version = "0.1.0"
+description = "Automated Course of Action generation and Monte Carlo war-gaming"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Sneha Islam"}]
+dependencies = ["numpy>=1.26", "scipy>=1.11", "scikit-learn>=1.4", "matplotlib>=3.8", "PyYAML>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+coaforge = "coaforge.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["coaforge*"]
+
+[tool.ruff]
+line-length = 125
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E731", "B905"]

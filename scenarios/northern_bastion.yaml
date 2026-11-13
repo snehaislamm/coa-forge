@@ -1,0 +1,42 @@
+# Fictional, abstract training scenario. All units, places and numbers are notional.
+name: "Exercise NORTHERN BASTION"
+description: >
+  A blue task force must secure key terrain on a remote northern peninsula
+  before an opposing force can reinforce it. Four objectives of unequal value
+  are held by small defending detachments. A mobile red reserve sits in depth
+  and will react once blue's main effort is detected.
+
+terrain:
+  height: 40
+  width: 60
+  seed: 7
+  water_level: 0.20
+  forest_density: 0.30
+
+objectives:
+  - {id: OBJ_ANVIL,  name: "Airstrip",        pos: [6, 30],  value: 4, critical: true}
+  - {id: OBJ_HARBOR, name: "Harbour",          pos: [9, 52],  value: 3}
+  - {id: OBJ_SPIRE,  name: "Relay site",       pos: [12, 10], value: 2}
+  - {id: OBJ_FORD,   name: "River crossing",   pos: [20, 36], value: 1}
+
+blue:
+  - {id: B1-MECH,  pos: [36, 28], strength: 100, firepower: 1.2, speed: 7.0}
+  - {id: B2-MECH,  pos: [37, 32], strength: 100, firepower: 1.2, speed: 7.0}
+  - {id: B3-LIGHT, pos: [35, 14], strength: 80,  firepower: 0.9, speed: 5.0}
+  - {id: B4-LIGHT, pos: [36, 46], strength: 80,  firepower: 0.9, speed: 5.0}
+  - {id: B5-ARMD,  pos: [38, 38], strength: 90,  firepower: 1.6, speed: 8.0}
+  - {id: B6-RECCE, pos: [34, 22], strength: 50,  firepower: 0.7, speed: 9.0}
+
+red:
+  defenders:
+    - {id: R1, pos: [6, 31],  strength: 70, firepower: 1.1}
+    - {id: R2, pos: [9, 51],  strength: 55, firepower: 1.0}
+    - {id: R3, pos: [12, 11], strength: 40, firepower: 1.0}
+    - {id: R4, pos: [20, 35], strength: 30, firepower: 0.9}
+  reserve:
+    - {id: R-RES, pos: [2, 40], strength: 75, firepower: 1.2, speed: 6.0}
+
+params:
+  t_max: 16.0
+  p_detect: 0.6
+  reserve_reaction: 4.0
