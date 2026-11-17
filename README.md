@@ -2,7 +2,7 @@
 
 **Automated Course of Action (COA) generation and Monte Carlo war-gaming.**
 
-[![CI](https://github.com/OWNER/coa-forge/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/coa-forge/actions/workflows/ci.yml)
+[![CI](https://github.com/snehaislamm/coa-forge/actions/workflows/ci.yml/badge.svg)](https://github.com/snehaislamm/coa-forge/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
